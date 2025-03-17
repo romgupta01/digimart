@@ -1,8 +1,9 @@
 import "./styles.css";
+import COLOR from "../../Config/color"; 
 function CustomButton({ backgroundColor, color, title, onClick }) {
   return (
     <div
-      className="customButtonBaseContainer"
+      className="CustomButtonBaseContainer"
       style={{ backgroundColor, color }}
       onClick={onClick}
     >

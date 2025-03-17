@@ -1,4 +1,4 @@
-.customInputBaseContainer {
+.CustomInputBaseContainer {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid var(--borderColor);
@@ -6,21 +6,21 @@
     gap: 4px;
   }
   
-  .customInputIconContainer {
+  .CustomInputIconContainer {
   }
   
-  .customInputInputContainer {
+  .CustomInputInputContainer {
     flex: 1;
   }
   
-  .customInputInputContainer input {
+  .CustomInputInputContainer input {
     border: none;
     background-color: transparent;
   }
   
-  .customInputInputContainer input:focus {
+  .CustomInputInputContainer input:focus {
     outline: none;
   }
   
-  .customInputPasswordContainer {
+  .CustomInputPasswordContainer {
   }

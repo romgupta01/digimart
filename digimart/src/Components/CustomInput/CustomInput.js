@@ -15,11 +15,11 @@ function CustomInput({
   const [showText, setShowText] = useState(false);
 
   return (
-    <div className="customInputBaseContainer">
-      <div className="customInputIconContainer">
+    <div className="CustomInputBaseContainer">
+      <div className="CustomInputIconContainer">
         {Icon ? <Icon color={iconColor} size={15} /> : null}
       </div>
-      <div className="customInputInputContainer">
+      <div className="CustomInputInputContainer">
         <input
           value={inputValue}
           type={isSecureEntry ? (showText ? "text" : "password") : type}
@@ -29,7 +29,7 @@ function CustomInput({
       </div>
       {isSecureEntry && (
         <div
-          className="customInputPasswordContainer"
+          className="CustomInputPasswordContainer"
           onClick={() => {
             setShowText(!showText);
           }}

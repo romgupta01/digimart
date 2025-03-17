@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CustomInput from "../../components/CustomInput/CustomInput";
-import COLOR from "../../config/COLOR"
-import "./styles.css";
+import CustomInput from "../../Components/CustomInput/CustomInput";
+import COLOR from "../../Config/color";
+import "./Styles.css";
 import { FaUserAlt } from "react-icons/fa";
 import { FaKey } from "react-icons/fa";
 
@@ -15,22 +15,20 @@ function LoginPage() {
     <div className="loginPageBaseContainer">
       <div className="loginPageContentBaseContainer">
         <div className="loginPageContentTitleContainer">
-          <h1>DIGIMART</h1>
-          <h4>Login</h4>
-
+          <h1>login me</h1>
+          <h4>{`Welcome ${email}`}</h4>
         </div>
         <div className="loginPageContentInputContainer">
           <CustomInput
             type={"email"}
             placeholder={"Enter Email"}
             Icon={FaUserAlt}
-            />
-            
-            
-              
-              
-            
-          
+            inputValue={email}
+            onChangeText={(e) => {
+              // alert(e.target.value)
+              setEmail(e.target.value);
+            }}
+          />
           <CustomInput
             type="password"
             placeholder={"Enter Password"}
@@ -46,18 +44,12 @@ function LoginPage() {
             Increment
           </button> */}
         </div>
-        <div className="loginPageContentButtonContainer style={{
-        backgroundImage: `url(${ASSETS.RegisterPageBackImage})`,
-      }}"><button
-        class="my-button">SIGN IN</button></div>
-       <div className="loginPageContentForgotPasswordContainer">Forget Password</div>
-       
-      
-
-
-       </div>
-       </div>
-    
+        <div className="loginPageContentButtonContainer">
+            
+        </div>
+        <div className="loginPageContentRegisterContainer"></div>
+      </div>
+    </div>
   );
 }
 
