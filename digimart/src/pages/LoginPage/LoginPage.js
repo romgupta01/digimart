@@ -1,10 +1,7 @@
 import { useState } from "react";
-import CustomInput from "../../Components/CustomInput/CustomInput";
-
-
-
-
-import "./Styles.css";
+import CustomInput from "../../components/CustomInput/CustomInput";
+import COLOR from "../../config/COLOR"
+import "./styles.css";
 import { FaUserAlt } from "react-icons/fa";
 import { FaKey } from "react-icons/fa";
 
