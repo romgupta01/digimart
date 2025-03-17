@@ -4,8 +4,7 @@ import CustomInput from  "../../Components/CustomInput/CustomInput";
 import ASSETS from "../../ASSETS";
 import { auth } from "../../firebase";
 import { useState } from "react";
-
-import "./styles.css";
+import "./Styles.css";
 function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,11 +18,12 @@ function RegisterPage() {
         
 
   return (
-    <div class="RegisterPageBasecontainer">
+    <div className="RegisterPageBasecontainer">
       
-      <div class="RegisterPageContentBaseContainer">
-      <div div class="RegisterPageContentTitleContainer"><h1>Register Page</h1></div>
-      <div class="RegisterPageInputContainer">
+      
+      <div className="RegisterPageContentBaseContainer">
+      <div  className="RegisterPageContentTitleContainer"><h1>Register Page</h1></div>
+      <div className="RegisterPageContentInputContainer">
         <CustomInput
         placeholder={"Name"}
         inputValue={"Name"}
@@ -44,7 +44,7 @@ function RegisterPage() {
         onChangeText={(e) => setPassword(e.target.value)}
         isSecureEntry={true}
       />
-     <div div class="RegisterPageButtoncontainer" >
+     <div div className="RegisterPageButtonContainer" >
       
       <CustomButton
         backgroundColor={"#0000FF"}
