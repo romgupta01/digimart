@@ -1,0 +1,61 @@
+.RegisterPageBaseContainer {
+    /* Path relative to public folder */
+  
+
+
+   width: 100%;
+  height: 100vh;
+ /* background:rgb(52, 108, 156);/* linear-gradient(to right,rgb(193, 86, 14),rgb(97, 53, 17));*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RegisterPageContentBaseContainer {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 20px ;
+  height: 90vh;
+  background-color:transparent;
+  border-radius: 20px;
+  border: 1px solid var(--borderColor);
+  grid-auto-flow: column;
+}
+
+.RegisterPageContentTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: smaller;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.RegisterPageContentInputContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  grid-auto-flow: column;
+  font:white;
+  
+}
+
+.RegisterPageContentButtonContainer {
+ 
+  background-color:black;
+  
+  
+} 
+  .RegisterPageContentLoginButtonContainer {
+    color: black;
+  font-size: smaller;
+
+}
+.RegisterPageContentBaseImageContainer{
+  height:90vh;
+
+}
+.heading{
+  color: aliceblue;
+}

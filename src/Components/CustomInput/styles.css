@@ -1,0 +1,29 @@
+.CustomInputBaseContainer {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--borderColor);
+    display: flex;
+    gap: 4px;
+  }
+  
+  .CustomInputIconContainer {
+  }
+  
+  .CustomInputInputContainer {
+
+    flex: 1;
+    text-decoration-color: white;
+  }
+  
+  .CustomInputInputContainer input {
+    border: none;
+    background-color: transparent;
+    color: white;
+  }
+  
+  .CustomInputInputContainer input:focus {
+    outline: none;
+  }
+  
+  .CustomInputPasswordContainer {
+  }
