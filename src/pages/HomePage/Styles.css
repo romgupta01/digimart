@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    background-color: black;
   }
   
   .baseContainer img {
@@ -49,3 +50,7 @@
 .contentBaseContainer .icon:hover {
     transform: rotate(360deg);
   }
+.HomePageBaseContainer{
+  background-color: black;
+
+}

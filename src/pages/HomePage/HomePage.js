@@ -1,33 +1,45 @@
-import ASSETS from "../../ASSETS";
+
 import CustomButton from "../../Components/CustomButton/CustomButton";
 import COLOR from "../../Config/color";
 import "./Styles.css";
 
 
-function HomePage() {
-  return (
-    <div
-      className="baseContainer"
-      style={{
-        backgroundImage: `url(${ASSETS.RegisterPageBackImage})`,
-      }}
-    >
-      {/* <img src={require("../../assets/images/HomePageBackImage.jpg")} alt="" /> */}
-      {/* <img src={ASSETS.homePageImage} alt="" />
-      <img id="second" src={ASSETS.homePageImage} alt="" />
-      <img src={ASSETS.homePageImage} alt="" /> */}
+import CustomNavbar from "../../Components/CustomNavBar/CustomNavBar";
+import { Outlet, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import React, { useEffect } from 'react';
 
-      <div className="contentBaseContainer">
-        <h1>DIGIMART</h1>
+
+
+function HomePage() {
+const [name,setName]=useState();
+  const navigate = useNavigate();
+  
+   useEffect(() => {
+    const uid = localStorage.getItem("uid");
+    if (!uid) {
+     navigate("/login");
+    }
+  }, []);
+    
+    
+  return (
+    
+    
+    
+      <div class="HomePageBaseContainer">
+        <div class="HomePageLogoContainer">
+          <CustomNavbar />
+        </div>
+        <div class="HomePageContentBaseContainer">
+          <Outlet/>
+          </div>
+          </div>
+          
+
+
         
-        <CustomButton
-          backgroundColor={COLOR.secondSecondaryColor}
-          color={COLOR.blackColor}
-          title={"Grab your product"}
-          onClick={() => alert("Click Done")}
-        />
-      </div>
-    </div>
+    
   );
 }
 
