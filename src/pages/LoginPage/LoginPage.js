@@ -8,7 +8,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import  { useNavigate } from 'react-router-dom';
 import CustomButton from "../../Components/CustomButton/CustomButton";
-import basics from "../../ASSETS/images/basics.jpg";
+
 import { Link } from "react-router-dom";
 import ForgotPassword from "../../Components/ForgotPassword/ForgotPassword";
 
@@ -19,12 +19,14 @@ function LoginPage() {
   const [error, setError] = useState("");
   const [buttonText, setButtonText] = useState("Login");
   const navigate = useNavigate();
-  const styles = {
+  {/*const styles = {
+
+
   backgroundImage: `url(${basics})`,
   backgroundSize: "cover",
   width: "100%",
   height: "100vh",
-  }
+  }*/}
 
 
   const handleLogin = async (e) => {
@@ -46,11 +48,11 @@ function LoginPage() {
     navigate("/register");
   };
   return (
-    <div className="loginPageBaseContainer" style={styles}>
+    <div className="loginPageBaseContainer" >
       <div className="loginPageContentBaseContainer">
         <div className="loginPageContentTitleContainer">
           <h1 class="heading">login me</h1>
-          <h4 class="heading">{`Welcome ${email}`}</h4>
+          <h4 class="heading">{`Welcome DIGIMART`}</h4>
         </div>
         <div className="loginPageContentInputContainer">
           <CustomInput

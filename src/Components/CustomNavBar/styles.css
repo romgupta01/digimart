@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 40px;
-  background-color:grey;
+  background-color: #86899c8d;
 }
 
 .customNavbarLogoContainer {
@@ -12,6 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  color: beige;
+  
 }
 
 .navbarLogoIcon :hover {
@@ -20,21 +22,24 @@
 }
 
 .customNavbarLinkContainer {
-  flex: 4;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-size: 20px;
+  color: bisque;
 }
 
 .customNavbarLinkContainer p {
   transition: 0.5s ease-in-out;
+  
 }
 
 .customNavbarLinkContainer p:hover {
   cursor: pointer;
   font-weight: bold;
   text-decoration: underline;
+  font-weight: bold;
 }
 
 .customNavbarProfileContainer {
@@ -42,4 +47,60 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  color: bisque;
+
 }
+
+.CustomNavbarlogincontainer{
+  
+  
+  align-items: flex-end
+}
+
+.searchbar{
+  margin-left: 40px; /* or margin: 0 10px; for horizontal gap */
+  /* optional styling */
+  display: flex;
+  align-items: center;
+}
+
+  
+
+
+
+
+.icon{  margin-left: 80px; /* or margin: 0 10px; for horizontal gap */
+  /* optional styling */
+  display: flex 4;
+  align-items: center;
+}
+
+.login-icon{
+  color: beige;
+  cursor: pointer;
+  margin-left: 10px;
+
+}
+
+.fasearch{
+  margin-left: 20px;
+display: flex ;
+align-items: center;
+gap: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+

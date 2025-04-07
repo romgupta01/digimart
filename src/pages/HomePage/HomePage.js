@@ -28,6 +28,8 @@ const [name,setName]=useState();
     
     
       <div class="HomePageBaseContainer">
+
+        
         <div class="HomePageLogoContainer">
           <CustomNavbar />
         </div>
@@ -35,12 +37,6 @@ const [name,setName]=useState();
           <Outlet/>
           </div>
           </div>
-          
-
-
-        
-    
-  );
+  )
 }
-
 export default HomePage;

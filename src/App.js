@@ -6,7 +6,12 @@ import HomePage from "./pages/HomePage/HomePage";
 import LandingPage from "./pages/HomePage/pages/Landingpage/Landingpage";
 import AboutPage from "./pages/HomePage/pages/Aboutpage/AboutPage";
 import ProductPage from "./pages/HomePage/pages/ProductPage/ProductPage";
-import VlogPage from "./pages/HomePage/pages/VlogPage/VlogPage";
+import ServicePage from "./pages/HomePage/ServicePage/ServicePage";
+import CartPage from "./Components/Cart/Cart";
+
+
+
+
 
 function App() {
   return (
@@ -16,10 +21,21 @@ function App() {
           <Route path="/home" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/product" element={<ProductPage />} />
-          <Route path="/vlog" element={<VlogPage />} />
+          <Route path="/service" element={<ServicePage/>} />
+          <Route path="/cart" element={<CartPage />} />
+
+          
+          
+
+          
+          
         </Route>
+        
+        
+
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        
       </Routes>
     </BrowserRouter>
   );

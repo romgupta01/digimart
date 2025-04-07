@@ -1,6 +1,6 @@
 const COLOR = {
   baseColor: "#023436",
-  baseColorDark: "#01191a",
+  baseColorDark: "",
   secondaryColor: "#F0F7F4",
   secondSecondaryColor: "#FAC748",
   whiteColor: "#FFFFFF",
