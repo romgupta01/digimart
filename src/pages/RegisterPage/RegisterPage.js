@@ -141,7 +141,7 @@ const handleLogin = async(e) => {
         <h  style={{ color: "grey", fontSize: "24px", textAlign: "center" }}>ALready have an account?</h>
         <CustomButton
         backgroundColor={"#0000FF"}
-        title={buttonText}
+        title="login"
         color={"#FFFFFF"}
         onClick={handleLogin}
         

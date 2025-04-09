@@ -92,16 +92,32 @@ function LoginPage() {
             onClick={handleLogin}
           />
         </div>
-        <div className="loginPageContentRegisterContainer">
+        {/*<div className="loginPageContentRegisterContainer">
           <p style={{ color: "grey", fontSize: "24px", textAlign: "center" }}>don't have an account</p>
        
           <CustomButton
             backgroundColor={"#0000FF"}
-            title={buttonText}
+            title="register"
             color={"#FFFFFF"}
             onClick={handleRegister}
           />
-        </div>
+        </div>*/}
+        <div className="loginPageContentRegisterContainer">
+        <p>
+  Don't have an account?
+  <span
+    style={{ color: 'skyblue', cursor: 'pointer', marginLeft: '5px' }}
+    onClick={handleRegister
+      // Navigate to register page or trigger a modal
+     // console.log('Redirecting to register...');
+     
+    }
+  >
+    Register
+  </span>
+</p>
+</div>
+
       </div>
     </div>
   );

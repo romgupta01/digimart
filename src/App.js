@@ -9,9 +9,7 @@ import ProductPage from "./pages/HomePage/pages/ProductPage/ProductPage";
 import ServicePage from "./pages/HomePage/ServicePage/ServicePage";
 import CartPage from "./Components/Cart/Cart";
 
-
-
-
+import ProfilePage from "./pages/HomePage/pages/Profilepage/ProfilePage";
 
 function App() {
   return (
@@ -21,21 +19,13 @@ function App() {
           <Route path="/home" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/product" element={<ProductPage />} />
-          <Route path="/service" element={<ServicePage/>} />
+          <Route path="/service" element={<ServicePage />} />
           <Route path="/cart" element={<CartPage />} />
-
-          
-          
-
-          
-          
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
-        
-        
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        
       </Routes>
     </BrowserRouter>
   );

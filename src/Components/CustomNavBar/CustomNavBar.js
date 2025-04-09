@@ -31,6 +31,7 @@ function CustomNavbar() {
 
   const handleLoginClick = () => {
     setIsLoggedIn(!isLoggedIn);
+    navigate("/login");
   };
 
   
@@ -114,7 +115,12 @@ function CustomNavbar() {
 
       </div>
       <div className="customNavbarProfileContainer">
-        <FaCircleUser size={40} color={COLOR.whiteColor} />
+        <FaCircleUser 
+          size={40}
+          color={COLOR.blackColor}
+          onClick={() => navigate("/profile")}
+        />
+        
         
       
       
@@ -143,4 +149,4 @@ function CustomNavbar() {
   );
 }
 
-export default CustomNavbar
+export default CustomNavbar;

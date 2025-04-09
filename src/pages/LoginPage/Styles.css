@@ -8,9 +8,10 @@
 }
 
 .loginPageContentBaseContainer {
+ height: 90vh;
  display: flex;
  flex-direction: column;
- gap: 10px;
+ gap: 1px;
  padding:20px;
  background-color: transparent;
  border-radius: 20px;
@@ -21,14 +22,14 @@
  display: flex;
  flex-direction: column;
  align-items: center;
- gap: 10px;
+ gap: 0px;
  font-size: smaller;
  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .loginPageContentInputContainer {
  display: flex;
- gap: 10px;
+ gap: 0px;
  flex-direction: column;
  background-color: transparent;
 }
@@ -40,7 +41,10 @@
 .loginPageContentRegisterContainer {
 background-color:black;
  font-size: smaller;
+ gap:2px;
 }
+
+ 
 .heading{
  color:aliceblue;
 }
