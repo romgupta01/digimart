@@ -35,8 +35,9 @@ function LoginPage() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
+   
       alert("Login successful!");
-     localStorage.setItem("uid", email);
+     localStorage.setItem("uid", email.uid);
       navigate("/home");
     } catch (err) {
       setError(err.message);

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
 import {  FaUser } from "react-icons/fa";
+import cart from "../Cart/Cart";
 
 
 
@@ -129,7 +130,7 @@ function CustomNavbar() {
                   
         
         {email} 
-        <div className="shopingcartcontainer">
+        <div className="shopingcartcontainer"onClick={navigate}>
         
     
       

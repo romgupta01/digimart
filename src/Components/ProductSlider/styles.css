@@ -1,0 +1,27 @@
+
+.w-full h-40 object-cover mb-2{
+     width: 350px; /* or any specific value */
+  height: auto;
+  margin: 0 10px;
+}
+.product-card{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+
+    width:500px;
+    height:240px;
+}
+
+.text-2xl font-semibold mb-4{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 150px;
+}
+.cart-button{
+    background-color: yellow;
+}
+

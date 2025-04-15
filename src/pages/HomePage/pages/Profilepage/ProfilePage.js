@@ -4,6 +4,17 @@ import "./style.css";
 import { get, ref } from "firebase/database";
 import { database } from "../../../../firebase";
 import { RotatingLines } from "react-loader-spinner";
+// Utility to sanitize email for Firebase paths
+const sanitizeEmail = (email) => {
+  return email
+    .toLowerCase()
+    .replace(/\./g, ',')
+    .replace(/#/g, '')
+    .replace(/\$/g, '')
+    .replace(/\[/g, '')
+    .replace(/\]/g, '')
+    .replace(/@/g, '_at_');
+};
 
 export default function ProfilePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,15 +25,30 @@ export default function ProfilePage() {
   }, []);
 
   const getProfileData = () => {
+    setIsLoading(true);
+
     setTimeout(() => {
-      setIsLoading(true);
-      get(ref(database, `users/${localStorage.getItem("uid")}`)).then(
-        (snapshot) => {
-          setUserData(snapshot.val());
-          console.log("dATA GET DONE", JSON.stringify(snapshot.val()));
-        }
-      );
-      setIsLoading(false);
+      const email = localStorage.getItem("email"); // 🔑 Store user's email instead of UID
+      if (!email) {
+        console.error("Email not found in localStorage");
+        setIsLoading(false);
+        return;
+      }
+
+      const safeEmail = sanitizeEmail(email);
+
+      get(ref(database, `users/${safeEmail}`))
+        .then((snapshot) => {
+          const data = snapshot.val();
+          setUserData(data);
+          console.log("DATA GET DONE", data);
+        })
+        .catch((err) => {
+          console.error("Error:", err);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
     }, 3000);
   };
 
@@ -31,12 +57,10 @@ export default function ProfilePage() {
       <h1>Profile</h1>
       <div className="profileDataBaseContainer">
         {isLoading ? (
-       
-          <RotatingLines
-
-/>
+           <RotatingLines
+           />
         ) : (
-          <div>{JSON.stringify(userData.uid)}</div>
+          <div>{userData?.uid || "No user data found"}</div>
         )}
       </div>
     </div>
