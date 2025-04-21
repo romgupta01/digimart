@@ -1,8 +1,127 @@
 // components/Testimonial.jsx
+import React from "react";
+import { BsStarFill } from "react-icons/bs";
+
+export default function Testimonial({ fullName, jobTitle, quote, img, rating }) {
+  return (
+    <div className="bg-white p-6 rounded-xl shadow text-center">
+      <img src={img || "/images/default-avatar.png"} className="w-20 h-20 rounded-full mx-auto mb-3 object-cover" alt={fullName} />
+      <h3 className="font-bold text-lg">{fullName}</h3>
+      <p className="text-sm text-gray-500">{jobTitle}</p>
+      <p className="text-gray-600 italic my-3">“{quote}”</p>
+      <div className="text-yellow-500 flex justify-center">
+        {[...Array(rating)].map((_, i) => <BsStarFill key={i} className="mr-1" />)}
+      </div>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* components/Testimonial.jsx
 import React from 'react';
 import "./styles.css";
+import { BsTwitter,BsStar } from "react-icons/bs";
+import COLOR from "../../Config/color";
 
-const testimonials = [
+export default function Testimonial({
+  img, 
+  fullName="Full Name",
+  jobtitle="Job Title",
+  twiterhanadle="twiterhanadle",
+
+  text="text" ,
+  ratings
+})
+{
+  return (
+    <div calassName="card testimoonial in-view">
+      <div calssName="card-header">
+        <div ClasName="{`card-img ${img}`}"></div>
+        <div className="card-body">
+          <h3 className="card-title">{fullName}</h3>
+          <p ClasName="card-text">{jobtitle}</p>
+
+
+          <div>
+            <BsTwitter size={20} color={COLOR.whiteColor} />
+            {twiterhanadle}
+            </div>
+          </div>
+          </div>
+<div className="card-body">
+  <p className="card-text">{text}
+</p>
+     
+
+
+      </div>
+
+<div className="card-footer d-flex" style={{ course: "pointer"}}>
+  <BsStar className="mr-1"/> <BsStar className="mr-1" />
+  <BsStar className="mr-1"/> <BsStar className="mr-1" />
+  <BsStar className="mr-1"/>
+
+</div>
+
+
+
+
+
+    </div>
+  );
+}
+
+/*}
+
+
+{/*const testimonials = [
   {
     name: "Jane Doe",
     title: "Happy Customer",
@@ -46,3 +165,4 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
+*/}

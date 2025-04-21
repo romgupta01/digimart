@@ -3,14 +3,15 @@ import CustomButton from "../../Components/CustomButton/CustomButton";
 import COLOR from "../../Config/color";
 import "./Styles.css";
 import ProductSlider from "../../Components/ProductSlider/ProductSlider";
-import Testimonial from "../../Components/Testimonial/Testimonial";
+
 import CustomNavbar from "../../Components/CustomNavBar/CustomNavBar";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import React, { useEffect } from 'react';
 import Footer from "../../Components/Footer/Footer";
 
-
+import TestimonialForm from "../../Components/Testimonial/TestimonialForm";
+import TestimonialSection from "../../Components/Testimonial/TestimonialSection";
 
 function HomePage() {
 const [name,setName]=useState();
@@ -55,7 +56,8 @@ const [name,setName]=useState();
         {/* New Section: Testimonials */}
         <section className="testimonials">
           <h2>What Our Customers Say</h2>
-         <Testimonial/>
+         <TestimonialForm/>
+         <TestimonialSection/>
          </section>
 
         {/* New Section: Blog Highlights */}

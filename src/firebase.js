@@ -15,7 +15,8 @@ const firebaseConfig = {
   storageBucket: "digimart-b1a9d.firebasestorage.app",
   messagingSenderId: "822790371323",
   appId: "1:822790371323:web:409dcb9a1803cd8e4f7d5e",
-  measurementId: "G-K23K677PNW"
+  measurementId: "G-K23K677PNW",
+   databaseURL: "https://digimart-b1a9d-default-rtdb.firebaseio.com" // ← ADD THIS
 };
 
 // Initialize Firebase

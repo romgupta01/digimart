@@ -20,76 +20,38 @@ import COLOR from "../../Config/color";
 import { useNavigate } from "react-router-dom";
 import { color } from "framer-motion";
 import { FaSearch } from "react-icons/fa";
-
-
-
 function CustomNavbar() {
   const navigate = useNavigate();
   const email = localStorage.getItem("uid");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   
-
-
   const handleLoginClick = () => {
     setIsLoggedIn(!isLoggedIn);
     navigate("/login");
   };
-
-  
   const links = [
     { title: "Home", path: "/home" },
     { title: "About Us", path: "/about" },
     { title: "Products", path: "/product" },
     { title: "Service", path: "/service" },
   ];
-
   return (
     <div className="customNavbarBaseContainer">
       <div className="customNavbarLogoContainer">
-      
-        
-        
-      
-  
-      <FcMoneyTransfer size={40} color={COLOR.whiteColor} />
-      
-      
-      
-
-
-
-
-        
-          
+       <FcMoneyTransfer size={40} color={COLOR.whiteColor} />
     
         <h1>Digimart</h1>
         <div className="fasearch">
         <FaSearch size={20} color={COLOR.whiteColor} />
         </div>
-        
-
-
-        
-
-        <div className="searchbar">
+    <div className="searchbar">
       <input
         type="text"
         placeholder="Search products..."
-        
-        
-      
       />
+ </div>
 
-
-        
-      </div>
-
-        
-
-
-
-    
-      </div>
+    </div>
       <div className="customNavbarLinkContainer">
         {links.map((item) => {
           return <p onClick={() => navigate(item.path)}>{item.title}</p>;
@@ -104,17 +66,7 @@ function CustomNavbar() {
         </li>
 
 
-      
-
-      
-
-
-
-
-
-
-
-      </div>
+    </div>
       <div className="customNavbarProfileContainer">
         <FaCircleUser 
           size={40}
@@ -122,32 +74,14 @@ function CustomNavbar() {
           onClick={() => navigate("/profile")}
         />
         
-        
-      
-      
-    
-
-                  
-        
-        {email} 
+         {email} 
         <div className="shopingcartcontainer"onClick={navigate}>
         
-    
-      
-                 
-
-  
-    
-
-        <FaShoppingCart size={40}/>
+  <FaShoppingCart size={40}/>
 
         </div>
-
-   
-        
-      </div>
+   </div>
     </div>
   );
 }
-
 export default CustomNavbar;
